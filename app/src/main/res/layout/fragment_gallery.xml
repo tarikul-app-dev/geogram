@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/rellayout1">
+
+        <!--galery toolbar-->
+        <include layout="@layout/snippet_top_gallerytoolbar"/>
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:weightSum="100"
+        android:orientation="vertical"
+        android:layout_below="@+id/rellayout1">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="65">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:adjustViewBounds="true"
+                android:scaleType="fitCenter"
+                android:id="@+id/galleryImageView"/>
+
+            <ProgressBar
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:id="@+id/progressBAr"
+                android:layout_centerInParent="true"/>
+        </RelativeLayout>
+
+        <GridView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="35"
+            android:id="@+id/gridview"
+            android:numColumns="5"
+            android:verticalSpacing="1.5dp"
+            android:scaleType="fitCenter"
+            android:horizontalSpacing="1.5dp"
+
+            android:gravity="center"
+            android:layout_marginTop="1dp"/>
+
+    </LinearLayout>
+
+
+</RelativeLayout>
